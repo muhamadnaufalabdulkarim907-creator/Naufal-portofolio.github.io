@@ -1,0 +1,536 @@
+
+.Headeratas{
+    background-color: transparent;
+    color: #000000;
+    padding: 0px;
+    padding-top: 35px;
+    padding-bottom: 115px;
+    height: 100px;
+}
+.headermenu{
+    background-color:  rgb(255, 230, 0);
+    color: #ffffff;
+    padding: 25px;
+    text-align: center;
+}
+
+
+.social-buttons {
+  display: flex;
+  gap: 5px;
+  position:absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.social-buttons .btn {
+  text-decoration: none;
+  padding: 1px;
+  border-radius: 10%;
+  color: rgb(255, 255, 255);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  width: 40px;
+  height: 40px;
+}
+
+@media (max-width: 600px) {
+    .social-buttons{
+        top: 10px;
+        right: 10px;
+        flex-direction: column;
+    }
+}
+
+/*.facebook { background-color: rgb(255, 255, 255); }
+.instagram { background-color: rgb(0, 0, 0);}
+.youtube { background-color: rgb(0, 0, 0); }
+.whatsapp { background-color: rgb(0, 0, 0); } */
+
+
+.gambar{
+    padding-top: 1px;
+    width: 100%;
+    height: 600px;
+    font-size: 30px;
+    background-size:cover;
+    color: rgb(255, 255, 255);
+    word-spacing: 10pt;
+    background-image: url(ASSET/gambar/gambar4.jpg); 
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    font-family: "";
+
+
+}
+
+.batas {
+    background-color: transparent;
+    max-width: 100%;
+    padding: 50px;
+    height: 700px;
+    color: #000000;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.judul {
+    text-align: left;
+    font-size: 24px;
+    margin-bottom: 40px;
+    color: #000;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.hijau {
+    color: rgb(255, 230, 0);
+}
+
+.menu-links {
+    text-align: center;
+    font-size: 18px;
+    font-weight:bold;
+}
+
+.menu-links a {
+    margin:  15px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+
+}
+.menu-links a:hover {
+    color: rgb(251, 255, 0);
+}
+.dark-mode {
+  background-color: #0e4c78;
+  color: rgb(255, 255, 255);
+}
+body {
+    background-color: white;
+    color: rgb(85, 45, 45);
+    transition: background-color 0.8s ease, color 0.8s ease;
+}
+
+.dark-mode a {
+  color: #f5f5f5;
+}
+
+/* Tombol mode siang/malam */
+#modeButton {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 2000;
+  padding: 8px 15px;
+  background-color: gold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+@media (max-width: 2600px){
+    .sekolah {
+    background-color: rgb(255, 230, 0);
+    padding: 90px;
+    }
+}
+
+
+.bordershadow{
+    border:1px solid hsl(0, 0%, 95%);
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 30px 22px 38px -8px rgba(0,0,0,0.69);
+    -webkit-box-shadow: 30px 22px 38px -8px rgba(0,0,0,0.69);
+    -moz-box-shadow: 30px 22px 38px -8px rgba(0,0,0,0.69);
+    border-radius: 10px;
+    text-align: center;
+
+}
+
+.logo {
+    padding-top: 1px;
+    width: 100%;
+    height: 350px;
+    font-size: 50px;
+    background-size:cover;
+    color: rgb(255, 255, 255);
+    word-spacing: 10pt;
+    background-image: url(ASSET/gambar/gambar8.jpg); 
+    opacity: 70%;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    font-weight: bold;
+}
+
+.visimisi {
+    padding: 100px 150px 150px 150px;
+    width: 100%;
+}
+
+
+.jurusan {
+    background-color: rgb(255, 230, 0);
+    padding: 90px;
+    width: 100%;
+    text-align: right;
+
+}
+
+.jurusan .container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+@media (max-width: 2600px){
+
+.bordershadows{
+    border:1px solid #f1f1f1;
+    background-color: rgb(255, 255, 255);
+    color: #000000;
+    padding: 25px;
+    text-align: left;
+    border-radius: 20px;
+    margin-top: 20px;
+
+    }
+}
+
+@media (max-width: 2600px) {
+
+.berita {
+    background-color: rgb(255, 255, 255) ;
+    padding: 100px;
+
+}
+}
+.lokasi {
+    background-color: #232225;
+    padding: 50px;
+    color: white;
+    weight: "1700px";
+}
+
+iframe {
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+.anto {
+    background-color: black;
+    font-size: 12pt;
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+.nav-bar{
+    background-color: #0e865a;
+    color: #ffffff;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 10pt;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    position: relative;
+    
+    
+}
+
+.nav-bar2{
+    background-color: #065a9f;
+    color: #ffffff;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 10pt;
+    height: 95px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    position: relative;
+    
+    
+}
+
+.gambar{
+    color: #000000;
+    height: 300px;
+    background-image: linear-gradient(90deg, #1CB5E0 0%, #000851 100%);
+    position:static;
+    
+
+
+
+
+}
+@media screen and (max-width: 768px) {
+  .logo-custom {
+    width: 150px;
+  }
+
+  .judul h1 {
+    font-size: 22px;
+  }
+
+  .deskripsi .card {
+    font-size: 14px;
+    padding: 20px;
+  }
+}
+.judul {
+  text-align: center;
+  font-size: 28px;
+  margin-top: 20px;
+  color: #000;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.deskripsi {
+  background-color: #ffffff;
+  padding: 60px 30px;
+  text-align: justify;
+}
+
+.deskripsi .card {
+  border: 1px solid #ddd;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 25px;
+  height: 100%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  font-size: 16px;
+}
+.galery{
+  background-color: #ffffff;
+
+      border: 4px solid #2498e1;
+      border-radius: 20px;
+      padding: 30px;
+      margin-bottom: 5px;
+      padding-left: 30px;
+      height: 100%;
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+      color: #000000;
+      font-size: 10pt;
+
+}
+
+.optimus {
+  position: relative;
+  width: 100%;
+}
+
+.picture {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.9); /* transparan sedikit */
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .5s ease;
+  z-index: 1;
+}
+
+.optimus:hover .overlay {
+  bottom: 0;
+  height: 100%;
+}
+
+.kata {
+  white-space: nowrap; 
+  color: rgb(0, 0, 0);
+  font-size: 100%;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.footer {
+  background-color: #065a9f;
+  color: #ffffff;
+  padding: 40px 0 20px 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.container-footer {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.footer-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-col {
+  flex: 1 1 220px;
+  margin-bottom: 30px;
+}
+
+.footer-col h4 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #f1c40f;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-col ul li a:hover {
+  color: #f1c40f;
+}
+
+.footer-col p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.social-links a {
+  display: inline-block;
+  margin-right: 10px;
+  color: #ffffff;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.social-links a:hover {
+  color: #f1c40f;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 14px;
+  border-top: 1px solid #444;
+  padding-top: 15px;
+}
+
+@media (max-width: 768px) {
+  .footer-row {
+    flex-direction: column;
+  }
+
+  .footer-col {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+
+  .social-links {
+    margin-top: 10px;
+  }
+}
+
+   /* ==== NAVBAR STICKY + SHRINK EFFECT ==== */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+  transition: all 0.3s ease;
+  background-color: rgb(55, 133, 71); /* Warna utama */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 15px 0;
+}
+
+.navbar.shrink {
+  padding: 8px 0;
+  background-color: rgb(44, 112, 60);
+}
+
+/* Branding */
+.navbar-brand {
+  font-weight: bold;
+  font-size: 22px;
+  letter-spacing: 1px;
+  color: white;
+}
+
+/* Link utama */
+.navbar-nav .nav-link {
+  font-size: 16px;
+  font-weight: 500;
+  margin-right: 15px;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ffd700;
+}
+
+/* Sosial media */
+.social-buttons a {
+  margin-left: 10px;
+  font-size: 18px;
+  color: white;
+  transition: color 0.3s ease;
+  margin-top: auto;
+  
+}
+
+.social-buttons a:hover {
+  color: #ffd700;
+}
+
+/* Toggle (hamburger) */
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  .navbar-nav {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .navbar-nav .nav-link {
+    margin-right: 0;
+    margin-bottom: 8px;
+  }
+
+  .social-buttons {
+    justify-content: center;
+    margin-top: 10px;
+    bottom: 15px;
+  }
+}
+
+
+
