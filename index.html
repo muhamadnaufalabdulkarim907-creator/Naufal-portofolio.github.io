@@ -26,6 +26,7 @@
             min-height: 100vh;
             display: flex;
             flex-direction: column;
+            overflow-x: hidden;
         }
         
         .navbar {
@@ -135,6 +136,7 @@
             border: none;
             font-size: 1.5rem;
             padding: 0.25rem 0.5rem;
+            color: white;
         }
         
         .navbar-toggler:focus {
@@ -341,6 +343,7 @@
             max-width: 100vw;
             height: 60vh;
             margin-top: 100px;
+            overflow: hidden;
         }
 
         .horizontal-scroll {
@@ -471,6 +474,11 @@
             text-align: center;
         }
         
+        /* Mobile-specific improvements */
+        .mobile-adjust {
+            /* Utility class for mobile adjustments */
+        }
+        
         /* Media Queries untuk Responsivitas */
         @media (max-width: 1200px) {
             .horizontal-scroll-item {
@@ -506,11 +514,28 @@
             .gopal {
                 font-size: large;
             }
+            
+            /* Navbar adjustments */
+            .navbar-collapse {
+                background: linear-gradient(90deg, rgb(255, 174, 0) 0%, rgb(17, 151, 212));
+                padding: 15px;
+                border-radius: 8px;
+                margin-top: 10px;
+            }
+            
+            .nav-link {
+                margin: 5px 0;
+            }
         }
         
         @media (max-width: 768px) {
+            body {
+                padding-top: 66px;
+            }
+            
             .nama {
                 font-size: 3rem;
+                text-align: center;
             }
             
             .identitas, .profil {
@@ -553,6 +578,7 @@
             
             .balsem-head {
                 font-size: large;
+                text-align: center;
             }
             
             .gopal {
@@ -567,6 +593,27 @@
             .contact-heading {
                 font-size: 2rem;
             }
+            
+            /* Mobile navigation improvements */
+            .navbar-brand {
+                font-size: 1.3rem;
+            }
+            
+            /* Improve touch targets */
+            .nav-link {
+                padding: 0.8rem 1rem !important;
+                margin: 0.2rem 0;
+            }
+            
+            .baka {
+                width: 55px;
+                height: 55px;
+                margin: 8px;
+            }
+            
+            .baka-foto {
+                width: 25px;
+            }
         }
         
         @media (max-width: 576px) {
@@ -580,10 +627,12 @@
             
             .caw {
                 font-size: 16px;
+                padding: 15px 10px;
             }
             
             .hero {
                 min-height: 200px;
+                height: 25vh;
             }
             
             .horizontal-scroll-item {
@@ -605,6 +654,7 @@
             .baka {
                 width: 50px;
                 height: 50px;
+                margin: 5px;
             }
             
             .baka-foto {
@@ -618,18 +668,87 @@
             .contact-item {
                 font-size: 14px;
             }
+            
+            /* Improve mobile layout */
+            .container {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+            
+            .btn {
+                padding: 0.5rem 1rem;
+                font-size: 0.9rem;
+            }
+            
+            /* Horizontal scroll adjustments for very small screens */
+            .horizontal-scroll-item {
+                width: 220px;
+                height: 130px;
+                margin-right: 20px;
+            }
+            
+            .horizontal-scroll-wrapper::before,
+            .horizontal-scroll-wrapper::after {
+                width: 60px;
+            }
         }
         
         @media (max-width: 400px) {
             .horizontal-scroll-item {
                 width: 200px;
                 height: 120px;
-                margin-right: 20px;
+                margin-right: 15px;
             }
             
             .horizontal-scroll-wrapper {
                 height: 25vh;
             }
+            
+            .nama {
+                font-size: 2.2rem;
+            }
+            
+            /* Navigation adjustments for very small screens */
+            .navbar-brand {
+                font-size: 1.2rem;
+            }
+            
+            .navbar-brand img {
+                width: 30px;
+            }
+            
+            /* Social icons */
+            .bulat {
+                font-size: 18px;
+                padding: 8px;
+                margin: 0 5px;
+            }
+            
+            /* Skills section */
+            .baka {
+                width: 45px;
+                height: 45px;
+            }
+            
+            .baka-foto {
+                width: 20px;
+            }
+        }
+        
+        /* Prevent horizontal overflow */
+        .row {
+            margin-left: 0;
+            margin-right: 0;
+        }
+        
+        /* Touch-friendly elements */
+        .btn, .nav-link, .baka, .bulat {
+            -webkit-tap-highlight-color: transparent;
+        }
+        
+        /* Improve form elements for mobile */
+        input, textarea, select {
+            font-size: 16px !important; /* Prevents zoom on iOS */
         }
     </style>
 </head>
@@ -639,7 +758,7 @@
             <a class="navbar-brand fw-bold" href="#">
                 <img src="asset/image/bussiness-man.png" width="40" class="me-2" alt="Logo"> Naufal
             </a>
-            <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
             </button>
             <div class="collapse navbar-collapse" id="nav">
@@ -672,10 +791,10 @@
         </div>
     </nav>
 
-    <section class="tongkol">
+    <section class="tongkol" id="tentang">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-6 col-md-12">
+                <div class="col-lg-6 col-md-12 order-lg-1 order-2">
                     <div class="identitas">
                         <p class="lead">Kenalin Nama gua</p>
                         <p class="nama">Naufal</p>
@@ -686,7 +805,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-6 col-md-12">
+                <div class="col-lg-6 col-md-12 order-lg-2 order-1">
                     <div class="profil">
                         <img src="asset/image/coy.png" alt="Profile Picture" class="pale img-fluid">
                         <div class="social-icons">
@@ -712,42 +831,42 @@
         <div class="container">
             <div class="row g-4 justify-content-center">
 
-                <div class="col-md-2 d-flex justify-content-center baka" title="PHP">
-                    <img src="asset/image/new-php-logo.png" alt="PHP Logo" class="baka-foto">
+                <div class="col-4 col-sm-3 col-md-2 d-flex justify-content-center baka" title="PHP">
+                    <img src="asset/image/new-php-logo.png" alt="PHP Logo" class="baka-foto img-fluid">
                 </div>
 
-                <div class="col-md-2 d-flex justify-content-center baka" title="LARAVEL">
-                    <img src="asset/image/Laravel.svg.png" alt="Laravel Logo" class="baka-foto">
+                <div class="col-4 col-sm-3 col-md-2 d-flex justify-content-center baka" title="LARAVEL">
+                    <img src="asset/image/Laravel.svg.png" alt="Laravel Logo" class="baka-foto img-fluid">
                 </div>
 
-                <div class="col-md-2 d-flex justify-content-center baka" title="CSS">
-                    <img src="asset/image/css-3.png" alt="CSS Logo" class="baka-foto">
+                <div class="col-4 col-sm-3 col-md-2 d-flex justify-content-center baka" title="CSS">
+                    <img src="asset/image/css-3.png" alt="CSS Logo" class="baka-foto img-fluid">
                 </div>
 
-                <div class="col-md-2 d-flex justify-content-center baka" title="BOOTSTRAP">
-                    <img src="asset/image/bootstrap.png" alt="Bootstrap Logo" class="baka-foto">
+                <div class="col-4 col-sm-3 col-md-2 d-flex justify-content-center baka" title="BOOTSTRAP">
+                    <img src="asset/image/bootstrap.png" alt="Bootstrap Logo" class="baka-foto img-fluid">
                 </div>
 
-                <div class="col-md-2 d-flex justify-content-center baka" title="JAVASCRIPT">
-                    <img src="asset/image/pngwing.com.png" alt="JavaScript Logo" class="baka-foto">
+                <div class="col-4 col-sm-3 col-md-2 d-flex justify-content-center baka" title="JAVASCRIPT">
+                    <img src="asset/image/pngwing.com.png" alt="JavaScript Logo" class="baka-foto img-fluid">
                 </div>
 
-                <div class="col-md-2 d-flex justify-content-center baka" title="REACT">
-                    <img src="asset/image/React-icon.svg.png" alt="React Logo" class="baka-foto">
+                <div class="col-4 col-sm-3 col-md-2 d-flex justify-content-center baka" title="REACT">
+                    <img src="asset/image/React-icon.svg.png" alt="React Logo" class="baka-foto img-fluid">
                 </div>
 
             </div>
 
-            <div class="col-12">
+            <div class="col-12 mt-5">
                 <div class="row g-4">
                     <div class="col-md-5">
-                        <img src="asset/image/wae.png" alt="Feature Image" class="pea">
+                        <img src="asset/image/wae.png" alt="Feature Image" class="pea img-fluid">
                     </div>
                     <div class="col-md-7">
                         <div class="balsem">
                             <p class="lead">Apa yang istimewa?</p>
                             <p class="balsem-head">
-                                Inilah alasan kenapa anda <span style="color:rgb(0, 162, 255);">harus</span> <br>
+                                Inilah alasan kenapa anda <span style="color:rgb(0, 162, 255);">harus</span> <br class="d-none d-md-block">
                                 memakai <span style="color: rgb(0, 162, 255);">jasa kami.</span>
                             </p>
                             <div class="gopal">
@@ -807,7 +926,7 @@
         <div class="container">
             <h2 class="contact-heading">Hubungi Saya</h2>
             <div class="row">
-                <div class="col-lg-6 col-md-12">
+                <div class="col-lg-6 col-md-12 mb-4">
                     <div class="contact-info">
                         <div class="contact-item">
                             <div class="contact-icon">
@@ -836,7 +955,7 @@
                                 <p>+62 889 0178 4938</p>
                             </div>
                         </div>
-                        <div class="social-icons">
+                        <div class="social-icons mt-3">
                             <a href="#"><i class="fa-brands fa-linkedin-in bulat" title="Linked in"></i></a>
                             <a href="#"><i class="fa-brands fa-github bulat" title="Github"></i></a>
                             <a href="#"><i class="fa-solid fa-robot bulat" title="Love you"></i></a>
@@ -855,7 +974,7 @@
                         </div>
                         <input type="text" class="form-control" placeholder="Subjek">
                         <textarea class="form-control" rows="5" placeholder="Pesan Anda" required></textarea>
-                        <button type="submit" class="btn-contact">Kirim Pesan</button>
+                        <button type="submit" class="btn-contact mt-3">Kirim Pesan</button>
                     </form>
                 </div>
             </div>
@@ -898,9 +1017,42 @@
                         top: targetElement.offsetTop - 70,
                         behavior: 'smooth'
                     });
+                    
+                    // Close mobile navbar when clicking a link
+                    const navbarToggler = document.querySelector('.navbar-toggler');
+                    const navbarCollapse = document.querySelector('.navbar-collapse');
+                    if (navbarToggler && !navbarCollapse.classList.contains('show')) {
+                        return;
+                    }
+                    
+                    // Close the navbar
+                    bootstrap.Collapse.getInstance(navbarCollapse).hide();
                 }
             });
         });
+        
+        // Pause animation on hover/touch for better mobile experience
+        const scrollContainer = document.querySelector('.horizontal-scroll');
+        if (scrollContainer) {
+            scrollContainer.addEventListener('mouseenter', () => {
+                scrollContainer.style.animationPlayState = 'paused';
+            });
+            
+            scrollContainer.addEventListener('mouseleave', () => {
+                scrollContainer.style.animationPlayState = 'running';
+            });
+            
+            // For touch devices
+            scrollContainer.addEventListener('touchstart', () => {
+                scrollContainer.style.animationPlayState = 'paused';
+            });
+            
+            scrollContainer.addEventListener('touchend', () => {
+                setTimeout(() => {
+                    scrollContainer.style.animationPlayState = 'running';
+                }, 2000);
+            });
+        }
     </script>
 </body>
 </html>
