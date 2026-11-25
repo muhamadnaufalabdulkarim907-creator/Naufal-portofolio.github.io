@@ -427,6 +427,21 @@ a.c-item:active,button.c-item:active{scale:.97;transition-duration:.12s}
   .ch{animation:none}
 }
 @media print{.nav,.progress{display:none}}
+
+/* ===== Refinement update: accessibility, responsive polish, motion restraint =====
+   Override layer intentionally isolated for easier maintenance. */
+:focus-visible{outline:3px solid var(--accent);outline-offset:4px;border-radius:8px}
+img{max-width:100%;height:auto}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto!important}
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+}
+@media(max-width:680px){
+  .hero-stage{min-height:100svh}
+  .nav-inner{padding-inline:max(16px,env(safe-area-inset-left)) max(16px,env(safe-area-inset-right))}
+  .section{padding-inline:clamp(18px,5vw,28px)}
+}
+
 </style>
 </head>
 
@@ -1071,7 +1086,7 @@ function frame(){
   nav.classList.toggle('scrolled', y > 12);
   updateHero(); updateScrub(); updateProc(); updateWork(); updatePar();
 }
-function loop(t){ lenis && lenis.raf(t); frame(); requestAnimationFrame(loop); }
+function loop(t){ if(lenis){ lenis.raf(t); frame(); requestAnimationFrame(loop); } }
 addEventListener('resize', measure);
 addEventListener('load', measure);
 if (document.fonts && document.fonts.ready) document.fonts.ready.then(measure);
@@ -1195,7 +1210,8 @@ $('#contactForm').addEventListener('submit', e => {
 
 /* ================= Init ================= */
 applyLang(lang);
-requestAnimationFrame(loop);
+frame();
+if(lenis){ requestAnimationFrame(loop); } else { addEventListener("scroll", () => { dirty = true; frame(); }, {passive:true}); }
 });
 </script>
 </body>
